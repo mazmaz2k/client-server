@@ -1,0 +1,41 @@
+User Name(login): omrimi
+Full Name and ID: Omri Mizrahi 303082549
+Exercise 4
+include files: server.c
+-------------------------------------------------------------------------------------------------
+File:		---> server.c 
+-------------------------------------------------------------------------------------------------
+Explanation:
+-------------------------------------------------------------------------------------------------
+Those are the most important file in our program,It includes all the algorithms that the program use.our program is the become a echo massage replay "server" side to muliplate clients we use UDP socket .
+
+-------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------
+Additional explanation:
+-------------------------------------------------------------------------------------------------
+Our program operate as server side to several clients .we use UDP socket to recive mane reqests to recive message from clients and we send the same massage to to the client but in upper case letters we use hre in "toUpperCase" function.
+to know if there is clients t recive data from them we use "select" its blocking until we have any cilents to recive data from the and if the clients that is in the head of the queue is avaliable to recive massage.
+the structure that contain the massage is queue of node works in FIFO.
+each node has the info about the cilent that the massage belong ,the massage,and pointer to next node(prev in the line).
+we use "addToQueue" func to create new node and add it to the end of the line.
+we use "removeFromeQueue" to remove the first node in the queue.
+if we need to end the server we use "^c" we ceach the signal and free the queue memory with "sig_init" func and "freeQueue".
+-------------------------------------------------------------------------------------------------
+
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+WARNING: Please don't change the files "server.c” 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+How To Run The Programs in linux operation system.
+1) Enter to the Terminal.
+2) Copy the files to you’re destination folder.
+3) Enter the folder that contain the files and print in the terminal the
+command:
+"cd DESTINATION FOLDER/..".
+4) To compile the program enter the command: "./gcc -Wall -Wvla server.c -o server"
+5) To Run print the command:"./server [port]"
+6)Then we need to connect client of our choice.:"./client <server-host-name> <port>"
+

@@ -1,0 +1,42 @@
+User Name(login): omrimi
+Full Name and ID: Omri Mizrahi 303082549
+Exercise 2
+include files: client.c
+-------------------------------------------------------------------------------------------------
+File:		---> client.c 
+-------------------------------------------------------------------------------------------------
+Explanation:
+-------------------------------------------------------------------------------------------------
+Those are the most important file in our program,It includes all the algorithms that the program use.our program is the become a "client" side to server ,we canonnect recive and send data of your'e choice of server ,only if he has HTTP protocol.
+
+-------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------
+Additional explanation:
+-------------------------------------------------------------------------------------------------
+Our program operate as client side to unknown HTTP protocol server  .we connect to server after the user enter srever host name.the user choose the host to connect to and the specific page.
+the user also choose the server port to connect to.the defult port is 80 but some servers use diffrent ports so if needed the user can choose it.
+we also can send messege tho the server and recive nessege from it. the type of massege we like so send is our choice. if wants the response headers to be sent back from the server we wil send -h
+if we specify that the client wants the object only if it was modified in the past <time-interval> we wi send -d and the <time-interval> after if the <time-interval> dont show after its an error. 
+the func "httpCheck" check if in the url there is "http://" it doesn't metter if its capital or lowere letters.
+the func "url_builder" gets the details from URL and set host-name , port number, and page return error if theres wrong input like no http://.
+"getTime" this function  gets the  <time-interval> and change it to the correct format in to buf. 
+I use all those function to check and orginase the data that we put int the terminal.
+-------------------------------------------------------------------------------------------------
+
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+WARNING: Please don't change the files "client.c” 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+How To Run The Programs in linux operation system.
+1) Enter to the Terminal.
+2) Copy the files to you’re destination folder.
+3) Enter the folder that contain the files and print in the terminal the
+command:
+"cd DESTINATION FOLDER/..".
+4) To compile the program enter the command: "./gcc -Wall client.c -o client"
+5) To Run print the command:"./client [-h] [-d <timeinterval>] <URL>"
+
+
